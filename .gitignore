@@ -2,3 +2,4 @@
 *.class
 # ignore all files in "bin" directory
 bin/
+log/

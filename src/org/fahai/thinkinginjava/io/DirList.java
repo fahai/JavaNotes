@@ -4,8 +4,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.regex.Pattern;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * Display a directory listing using regular expression
@@ -17,7 +16,7 @@ import org.apache.logging.log4j.LogManager;
  */
 public class DirList {
 	
-	private static Logger logger = LogManager.getLogger(DirList.class);
+	private static Logger logger = Logger.getLogger(DirList.class);
 
 	public static void main(String[] args){
 		File path = new File(".");
@@ -28,8 +27,7 @@ public class DirList {
 			list = path.list(new DirFilter(args[0]));
 		}
 		for(String dirItem : list){
-//			logger.info(dirItem);
-			System.out.println(dirItem);
+			logger.info(dirItem);
 		}
 	}
 	

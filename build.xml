@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tss" default="war-folder" basedir=".">
+	<property environment="env" />
+
+	<property name="debuglevel" value="source,lines,vars" />
+
+	<property name="project.build" location="./build" />
+	<property name="project.src" location="./src" />
+	<property name="project.web" location="./WebRoot" />
+	<property name="project.war" location="../tss.war" />
+	<property name="tmp" location="${project.build}/tmp" />
+	<property name="tmp.src" location="${tmp}/src" />
+	<property name="tmp.lib" location="${tmp}/lib" />
+	<property name="tmp.bin" location="${tmp}/bin" />
+	<property name="tmp.web" location="${tmp}/web" />
+
+	<!-- pmd proeprty -->
+	<property name="pmd.folder" location="./pmd" />
+	<property name="pmd.rulesetFile" value="./pmd/rulesets/sf-pmd.xml" />
+	<property name="pmd.reportType" value="csv" />
+	<property name="pmd.reportFile" value="pmd-report.csv" />
+	
+	<path id="java.classpath">
+		<pathelement path="${env.CLASSPATH}" /> 
+		<pathelement path="${env.JBOSS_HOME}/server/all/lib/servlet-api.jar" /> 
+		<pathelement path="${env.JBOSS_HOME}/server/all/lib/jsp-api.jar" />
+		<pathelement path="d:/Program Files/jboss-as/server/all/lib/javaee.jar" />
+		<fileset dir="${tmp.lib}" includes="*.jar" />
+	</path>
+	
+	<path id="pmd.classpath">
+		<fileset dir="${pmd.folder}/lib" includes="*.jar" />
+	</path>
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="pmd.classpath" />
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+	
+	<target name="pmd">
+		<echo>Checking codes with pmd tool</echo>
+		<pmd rulesetfiles="${pmd.rulesetFile}" shortFilenames="true" encoding="UTF-8">
+			<formatter type="${pmd.reportType}" toFile="${pmd.reportFile}" />
+			<fileset dir="${project.src}" includes="**/*.java" />
+		</pmd>
+	</target>
+	
+	<target name="copySrc">
+		<echo message="Copy src files ..." />
+		<delete dir="${project.build}" failonerror="false" />
+		<mkdir dir="${project.build}/src" />
+		<copy todir="${project.build}/src" includeemptydirs="false">
+			<fileset dir="${project.src}" excludes="**/.svn/**" />
+		</copy>
+		<copy todir="${project.build}/WebRoot" includeemptydirs="false">
+			<fileset dir="${project.web}" excludes="**/.svn/**, **/*.jar" />
+		</copy>
+	</target>
+	
+	<target name="init">
+		<echo message="Init directories ..." />
+		<delete dir="${project.build}" failonerror="false" />
+		<mkdir dir="${tmp.bin}" />
+
+		<mkdir dir="${tmp.src}" />
+		<copy todir="${tmp.src}" includeemptydirs="false">
+			<fileset dir="${project.src}" excludes="**/.svn/**" />
+		</copy>
+
+		<mkdir dir="${tmp.lib}" />
+		<copy todir="${tmp.lib}" includeemptydirs="false">
+			<fileset dir="${project.web}/WEB-INF/lib" >
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+
+		<mkdir dir="${tmp.web}" />
+		<copy todir="${tmp.web}" includeemptydirs="false">
+			<fileset dir="${project.web}" excludes="**/.svn/**" />
+		</copy>
+		
+		<!-- 排除掉用于单元测试的文件 -->
+		<delete file="${tmp.web}/WEB-INF/lib/junit-4.9b2.jar"/>
+		<delete file="${tmp.web}/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+		<delete file="${tmp.web}/WEB-INF/lib/log4j-1.2.16.jar"/>
+		<delete file="${tmp.web}/WEB-INF/beans_test.xml"/>
+		<delete file="${tmp.web}/WEB-INF/sysconfig_test.properties"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<echo message="Compiling java code ..." />
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${tmp.bin}" target="1.5" source="1.5" fork="true" encoding="UTF-8">
+			<src path="${tmp.src}" />
+			<classpath refid="java.classpath" />
+	    </javac>
+		
+		<delete dir="${tmp.web}/WEB-INF/classes" failonerror="false"></delete>
+		<copy todir="${tmp.web}/WEB-INF/classes" includeemptydirs="false">
+			<fileset dir="${tmp.src}">
+				<exclude name="**/*.java" /><!-- 拷贝src目录下的非Java文件 -->
+			</fileset>
+			<fileset dir="${tmp.bin}">
+				<include name="**/*.class" /><!-- 拷贝bin目录下的class文件 -->
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="war" depends="compile">
+		<echo message="Packing war file for local ..." />
+		
+		<delete dir="${project.war}" failonerror="false" />
+		<delete file="${project.war}" failonerror="false" />
+		<delete file="${tmp.web}/WEB-INF/classes/log4j.properties"/>
+		<war destfile="${project.war}" basedir="${tmp.web}" webxml="${tmp.web}/WEB-INF/web.xml" encoding="utf-8" />
+		<delete dir="${project.build}" failonerror="false" />
+	</target>
+	
+	<target name="war-folder">
+		<echo message="Packing war folder for local ..." />
+		<delete dir="${project.war}" failonerror="false" />
+		<delete file="${project.war}" failonerror="false" />
+		<delete file="${tmp.web}/WEB-INF/classes/log4j.properties"/>
+        <mkdir dir="${project.war}"/>
+        <copy todir="${project.war}" includeemptydirs="false">
+        	<fileset dir="WebRoot" excludes="**/.svn/**"/>
+        </copy>
+    </target>
+</project>
