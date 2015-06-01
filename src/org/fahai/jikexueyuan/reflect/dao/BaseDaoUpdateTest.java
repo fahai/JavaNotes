@@ -23,5 +23,12 @@ public class BaseDaoUpdateTest {
 			logger.info(e);
 		}
 	}
+	
+	@Test
+	public void testGetById(){
+		BaseDaoUpdate bu = new BaseDaoUpdate();
+		Object obj = bu.getById(Department.class, 2);
+		logger.info(obj);
+	}
 
 }

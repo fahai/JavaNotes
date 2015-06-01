@@ -41,6 +41,12 @@ public class BaseDaoUpdate {
 		return columns;
 	}
 	
+	/**
+	 * 获取数据表的列名，根据列名来指定列查询表数据，理论上速度会快一点
+	 * @param clazz
+	 * @return
+	 * ArrayList
+	 */
 	public ArrayList list(Class clazz){
 		ArrayList result = new ArrayList();
 		Connection conn = BaseConnection.getConnection();
@@ -72,13 +78,46 @@ public class BaseDaoUpdate {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps, rs);
 		}
 		return result;
 	}
 	
 	public Object getById(Class clazz, Integer id){
 		//TODO 根据主键的值来查询
-		return null;
+		Object obj = new Object();
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Field[] fields = clazz.getDeclaredFields();
+		ArrayList<String> columns = getAllColumns(clazz.getSimpleName());
+		StringBuilder sb = new StringBuilder();
+		sb.append("select ");
+		for(int i=0; i<columns.size(); i++){
+			sb.append(columns.get(i));
+			if(i != columns.size()-1){
+				sb.append(", ");
+			}
+		}
+		sb.append(" from " + clazz.getSimpleName());
+		sb.append(" where " + fields[0].getName() + " = " + id);
+		try {
+			ps = conn.prepareStatement(sb.toString());
+			rs = ps.executeQuery();
+			while(rs.next()){
+				obj = clazz.newInstance();
+				for(Field field : fields){
+					field.setAccessible(true);
+					if(columns.contains(field.getName())){
+						field.set(obj, rs.getObject(field.getName()));
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return obj;
 	}
 	
 	public ArrayList getBy(Class clazz, String condition, String value){
