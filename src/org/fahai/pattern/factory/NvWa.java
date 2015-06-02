@@ -3,7 +3,7 @@ package org.fahai.pattern.factory;
 /**   
  * @Title: NvWa.java 
  * @Package org.fahai.pattern.factory 
- * @Description: TODO
+ * @Description: 调用具体的工厂生产商品
  * @author fahai  
  * @date 2014-7-23 下午02:28:44 
  * @version V1.0   

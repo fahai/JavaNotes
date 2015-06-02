@@ -3,7 +3,7 @@ package org.fahai.pattern.singleton;
 /**   
  * @Title: Emperor.java 
  * @Package org.fahai.pattern.singleton 
- * @Description: TODO
+ * @Description: 单例模式：私有的属性，私有的构造器
  * @author fahai  
  * @date 2014-7-23 下午03:28:34 
  * @version V1.0   
