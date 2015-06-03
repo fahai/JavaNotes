@@ -26,7 +26,7 @@ public class MyController extends BaseObject{
 			stereo.turnUpVol();
 			break;
 		default:
-			logger.info("command not defined");
+			log.info("command not defined");
 			break;
 		}
 	}
@@ -43,7 +43,7 @@ public class MyController extends BaseObject{
 			stereo.turnDownVol();
 			break;
 		default:
-			logger.info("command not defined");
+			log.info("command not defined");
 			break;
 		}
 	}

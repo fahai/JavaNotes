@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import javax.print.attribute.standard.PresentationDirection;
+
 /**
  * 升级版的BaseDao
  * 获取表的所有列名，并与bean对象的属性做校验
@@ -83,9 +85,14 @@ public class BaseDaoUpdate {
 		}
 		return result;
 	}
-	
+	/**
+	 * 根据主键的值来查询
+	 * @param clazz
+	 * @param id
+	 * @return
+	 * Object
+	 */
 	public Object getById(Class clazz, Integer id){
-		//TODO 根据主键的值来查询
 		Object obj = new Object();
 		Connection conn = BaseConnection.getConnection();
 		PreparedStatement ps = null;
@@ -116,28 +123,218 @@ public class BaseDaoUpdate {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps, rs);
 		}
 		return obj;
 	}
 	
+	/**
+	 * 根据某一列的值来查询
+	 * @param clazz		
+	 * @param condition 列名
+	 * @param value		值
+	 * @return
+	 * ArrayList
+	 */
 	public ArrayList getBy(Class clazz, String condition, String value){
-		//TODO 根据某一列的值来查询
-		return null;
+		ArrayList result = new ArrayList();
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Field[] fields = clazz.getDeclaredFields();
+		ArrayList<String> columns = getAllColumns(clazz.getSimpleName());
+		StringBuilder sb = new StringBuilder();
+		sb.append("select ");
+		for(int i=0; i<columns.size(); i++){
+			sb.append(columns.get(i));
+			if(i != columns.size()-1){
+				sb.append(", ");
+			}
+		}
+		sb.append(" from " + clazz.getSimpleName());
+		sb.append(" where " + condition + " = ? ");
+		try {
+			ps = conn.prepareStatement(sb.toString());
+			ps.setObject(1, value);
+			rs = ps.executeQuery();
+			while(rs.next()){
+				Object obj = clazz.newInstance();
+				for(Field field : fields){
+					field.setAccessible(true);
+					if(columns.contains(field.getName())){
+						field.set(obj, rs.getObject(field.getName()));
+					}
+				}
+				result.add(obj);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps, rs);
+		}
+		return result;
 	}
 	
+	/**
+	 * 升级版的插入记录，并返回主键值
+	 * insert into employee (name, duty, deptId) values("fahai", "CHO", 2);
+	 * @param obj
+	 * @return
+	 * Integer
+	 */
 	public Integer save(Object obj){
-		//TODO 升级版的插入记录，并返回主键值
-		return 0;
+		int index = 0;
+		Class clazz = obj.getClass();
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Field[] fields = clazz.getDeclaredFields();
+		ArrayList<String> columns = getAllColumns(clazz.getSimpleName());
+		StringBuilder sb = new StringBuilder();
+		sb.append("insert into " + clazz.getSimpleName() + " ( ");
+		for(int i=1; i<columns.size(); i++){
+			sb.append(columns.get(i));
+			if(i != columns.size()-1){
+				sb.append(", ");
+			}
+		}
+		sb.append(" ) values ( ");
+		for(int i=1; i<columns.size(); i++){
+			sb.append("?");
+			if(i != columns.size()-1){
+				sb.append(", ");
+			}
+		}
+		sb.append(") ");
+		try {
+			ps = conn.prepareStatement(sb.toString(), PreparedStatement.RETURN_GENERATED_KEYS);
+			for(int i=1; i<fields.length; i++){
+				fields[i].setAccessible(true);
+				if(columns.contains(fields[i].getName())){
+					ps.setObject(i, fields[i].get(obj));
+				}
+			}
+			int isSuccess = ps.executeUpdate();
+			if(isSuccess > 0){
+				rs = ps.getGeneratedKeys();
+				while(rs.next()){
+					index = rs.getInt(1);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps, rs);
+		}
+		return index;
 	}
 	
+	/**
+	 * 升级版的跟新记录
+	 * update employee set name = "tomcat" where id = 9;
+	 * @param obj
+	 * @return
+	 * Integer 0-失败，1-成功
+	 */
 	public Integer update(Object obj){
-		//TODO 升级版的跟新记录
-		return 0;
+		int isSuccess = 0;
+		Class clazz = obj.getClass();
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		ArrayList<String> columns = getAllColumns(clazz.getSimpleName());
+		Field[] fields = clazz.getDeclaredFields();
+		StringBuilder sb = new StringBuilder();
+		sb.append("update " + clazz.getSimpleName() + " set ");
+		for(int i=1; i<columns.size(); i++){
+			sb.append(columns.get(i) + " = ?");
+			if(i != columns.size()-1){
+				sb.append(", ");
+			}
+		}
+		sb.append(" where " + columns.get(0) + " = ?");
+		System.out.println(sb.toString());
+		try {
+			ps = conn.prepareStatement(sb.toString());
+			for(int i=1; i<fields.length; i++){
+				fields[i].setAccessible(true);
+				ps.setObject(i, fields[i].get(obj));
+			}
+			fields[0].setAccessible(true);
+			ps.setObject(columns.size(), fields[0].get(obj));
+			isSuccess = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps, rs);
+		}
+		return isSuccess;
 	}
 	
-	public Integer delete(Class calzz, Integer id){
-		//TODO 升级版的删除记录
+	/**
+	 * 升级版的删除记录
+	 * delete from employe where id > 3;
+	 * @param calzz
+	 * @param id
+	 * @return
+	 * Integer
+	 */
+	public Integer delete(Class clazz, Integer id){
+		Integer isSuccess = 0;
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		Field[] fields = clazz.getDeclaredFields();
+		StringBuilder sb = new StringBuilder();
+		sb.append(" delete from " + clazz.getSimpleName() + " where ");
+		fields[0].setAccessible(true);
+		sb.append(fields[0].getName() + " = ?");
+		System.out.println(sb.toString());
+		try {
+			ps = conn.prepareStatement(sb.toString());
+			ps.setInt(1, id);
+			isSuccess = ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			BaseConnection.closeRes(conn, ps);
+		}
+		return isSuccess;
+	}
+	
+	// TODO 执行指定SQL
+	public Integer executeSql(Class clazz, String sql, Object[] args){
+		Integer result = 0;
+		Connection conn = BaseConnection.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
 		return 0;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
