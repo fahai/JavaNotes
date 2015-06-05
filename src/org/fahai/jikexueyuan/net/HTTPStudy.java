@@ -19,10 +19,10 @@ public class HTTPStudy extends BaseObject {
 	// http://fanyi.youdao.com/openapi.do?keyfrom=httponnection&key=316264537&type=data&doctype=<doctype>&version=1.1&q=要翻译的文本
 	public void readByGet(){
 		try {
-			URL url = new URL("http://fanyi.youdao.com/openapi.do?keyfrom=httponnection&key=316264537&type=data&doctype=xml&version=1.1&q=welcome");
+			URL url = new URL("http://fanyi.youdao.com/openapi.do?keyfrom=httponnection&key=316264537&type=data&doctype=json&version=1.1&q=welcome");
 			URLConnection conn = url.openConnection();
 			InputStream is = conn.getInputStream();
-			InputStreamReader isr = new InputStreamReader(is);
+			InputStreamReader isr = new InputStreamReader(is, "UTF-8");
 			BufferedReader br = new BufferedReader(isr);
 			String line;
 			StringBuilder sb = new StringBuilder();
@@ -66,6 +66,15 @@ public class HTTPStudy extends BaseObject {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	public void httpClientbyGet(){
+		
+	}
+	
+	public void httpClientbyPost(){
+		
 	}
 
 }

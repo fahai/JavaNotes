@@ -20,12 +20,14 @@ public class XMLParserTest {
 
 	@Test
 	public void testDom4jReadXML() {
-		fail("Not yet implemented");
+		XMLParser parser = new XMLParser();
+		parser.dom4jReadXML();
 	}
 
 	@Test
 	public void testDom4jWriteXML() {
-		fail("Not yet implemented");
+		XMLParser parser = new XMLParser();
+		parser.dom4jWriteXML();
 	}
 
 }

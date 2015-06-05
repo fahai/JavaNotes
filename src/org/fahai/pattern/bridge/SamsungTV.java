@@ -16,19 +16,16 @@ public class SamsungTV implements ITV {
 
 	@Override
 	public void on() {
-		// TODO Auto-generated method stub
 		log.info("Sansung TV is on.");
 	}
 
 	@Override
 	public void off() {
-		// TODO Auto-generated method stub
 		log.info("Sansung TV is off.");
 	}
 
 	@Override
 	public void switchChannel(int channel) {
-		// TODO Auto-generated method stub
 		log.info("Sansung: channel is switch to " + channel);
 	}
 

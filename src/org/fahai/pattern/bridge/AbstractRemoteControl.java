@@ -27,6 +27,14 @@ public abstract class AbstractRemoteControl {
 	public void setChannel(int channel){
 		tv.switchChannel(channel);
 	}
+
+	public ITV getTv() {
+		return tv;
+	}
+
+	public void setTv(ITV tv) {
+		this.tv = tv;
+	}
 	
 }
 

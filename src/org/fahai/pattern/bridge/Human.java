@@ -19,6 +19,10 @@ public class Human {
 		lrc.setChannel(99);
 		System.out.println("----- -----");
 		lrc.setChannelKeyboard(100);
+		
+		ITV sony = new SonyTV();
+		lrc.setTv(sony);
+		lrc.setChannel(55);
 	}
 
 }

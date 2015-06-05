@@ -16,12 +16,11 @@ public class LogitechRemoteControl extends AbstractRemoteControl {
 	
 	public LogitechRemoteControl(ITV tv) {
 		super(tv);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void setChannelKeyboard(int channel){
 		setChannel(channel);
-		log.info("Logitech use keyword to set channel.");
+		log.info("Logitech use keyboard to set channel.");
 	}
 
 }

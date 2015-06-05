@@ -16,19 +16,16 @@ public class SonyTV implements ITV {
 	
 	@Override
 	public void on() {
-		// TODO Auto-generated method stub
 		log.info("Sony TV is on.");
 	}
 
 	@Override
 	public void off() {
-		// TODO Auto-generated method stub
 		log.info("Sony TV is off.");
 	}
 
 	@Override
 	public void switchChannel(int channel) {
-		// TODO Auto-generated method stub
 		log.info("Sony : channel is switch to " + channel);
 	}
 
