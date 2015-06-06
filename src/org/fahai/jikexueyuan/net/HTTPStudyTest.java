@@ -27,5 +27,17 @@ public class HTTPStudyTest {
 		HTTPStudy study = new HTTPStudy();
 		study.readByPost();
 	}
+	
+	@Test
+	public void testHttpClientbyGet(){
+		HTTPStudy study = new HTTPStudy();
+		study.httpClientbyGet();
+	}
+	
+	@Test
+	public void testHttpClientbyPost(){
+		HTTPStudy study = new HTTPStudy();
+		study.httpClientbyPost();
+	}
 
 }
