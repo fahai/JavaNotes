@@ -29,7 +29,7 @@ public class HTTPStudy extends BaseObject {
 	public void readByGet() {
 		try {
 			URL url = new URL(
-					"http://fanyi.youdao.com/openapi.do?keyfrom=httponnection&key=316264537&type=data&doctype=json&version=1.1&q=welcome");
+					"http://fanyi.youdao.com/openapi.do?keyfrom=httponnection&key=316264537&type=data&doctype=json&version=1.1&q=decorator");
 			URLConnection conn = url.openConnection();
 			InputStream is = conn.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is, "UTF-8");

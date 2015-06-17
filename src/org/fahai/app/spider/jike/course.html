@@ -1,0 +1,1813 @@
+
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Java开发基础入门到精通与实战视频教程</title>
+    <meta name="keywords" content="java,java开发,java基础,java入门,java从入门到精通,java基础教程,java开发教程,java开发视频, java开发视频教程,java教程,java视频教程,java入门与实战教程,java实战教程" />
+    <meta name="description" content="Java开发基础入门到精通与实战视频教程,从Java基础,Java入门开始,涵盖丰富Java基础教程,Java实战教程,Java入门与实战教程,让Java零基础开发者从Java入门到精通,能学习到完整的Java开发视频教程,快速掌握Java开发技能." />
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3c68d41bda15331608595c98e9c3915";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50413628-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <link rel="stylesheet" href="http://s1.jikexueyuan.com/common/pkg/common_sync0_libs_4070847.css" /><link rel="stylesheet" href="http://s1.jikexueyuan.com/common/pkg/common_sync1_libs_4f01181.css" /><link rel="stylesheet" href="http://s1.jikexueyuan.com/course/css/course_69e71d5.css" /><link rel="stylesheet" href="http://s1.jikexueyuan.com/course/widget/lessonlist/lessonlist_d41d8cd.css" /></head>
+    <body>
+        <div id="wrapper">
+            <div id="header" class="w-1000">
+	
+
+	<div class="wrap">
+		<a href="http://www.jikexueyuan.com/">
+			<h2><img src="http://s1.jikexueyuan.com/common/images/logo_c8caff4.png" class="logo" alt="极客学院" jktag="&posGP=101001&posArea=9001&posOper=900028"></h2>
+		</a>
+		<div class="search-section">
+			<div class="headsearch" id="headsearch" action="###">
+				<input name="t" type="hidden" value="course">
+				<input class="search-text" type="text" name="q" autocomplete="off" id="web_search_header" placeholder="搜课程"  value="" style="padding-right: 55px;">
+				<input type="submit" class="search-btn" value="" jktag="&posGP=102001&posArea=9001&posOper=900004">
+				<div class="hot-words" style="display: block;">
+					<a href="http://www.jikexueyuan.com/search/s/q_Android" jktag="&posGP=102001&posArea=9001&posOper=900030&aSS=Android">Android</a>
+					<a href="http://www.jikexueyuan.com/search/s/q_iOS" jktag="&posGP=102001&posArea=9001&posOper=900030&aSS=iOS">iOS</a>
+					<a href="http://www.jikexueyuan.com/search/s/q_HTML5" jktag="&posGP=102001&posArea=9001&posOper=900030&aSS=HTML5">HTML5</a> </div>
+				<div id="J_keywordList" class="keyword-list">
+					<ul class="result-list"></ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="loginbox">
+			<a href="http://passport.jikexueyuan.com/connect/qq" style="text-decoration:none;color:#333;" rel="nofollow" jktag="&posGP=112001&posOper=900003"><span>QQ登录</span></a>
+			<em style="padding: 0px 10px">|</em><span><a href="http://passport.jikexueyuan.com/sso/login" postion="index_index_header" rel="nofollow" jktag="&posGP=112001&posOper=900002">登录</a></span>
+			<em style="padding: 0px 10px">|</em><span><a href="http://passport.jikexueyuan.com/sso/reg_phone" postion="index_index_header" rel="nofollow" jktag="&posGP=112001&posOper=900001">注册</a></span>
+		</div>
+		
+
+	</div>
+</div>
+<div id="loading">
+	<div class="loading-length"></div>
+</div>
+<div class="navpositon">
+    <div id="navbox">
+        <div class="nav w-1000">
+			<div class="navbox">
+			    <a href="http://www.jikexueyuan.com/" jktag="&posGP=100001&posArea=9004&posOper=900016">首页</a>
+			    <a href="http://www.jikexueyuan.com/course/" class="current" jktag="&posGP=101001&posArea=9004&posOper=900017">职业课程库</a>
+			    <a href="http://www.jikexueyuan.com/path/" class="" jktag="&posGP=1001003&posArea=9004&posOper=900018">知识体系图</a>
+			    <a href="http://www.jikexueyuan.com/practice/" class="" jktag="&posGP=101004&posArea=9004&posOper=900019">实战路径图</a>
+			    <a href="http://www.jikexueyuan.com/question/" class="" jktag="&posGP=104002&posArea=9004&posOper=900020">技术问答</a>
+
+			</div>
+            <div class="user-need">
+                <a href="http://www.jikexueyuan.com/vip/" jktag="&posGP=114001&posArea=9004&posOper=900021" >
+                    <span><img src="http://s1.jikexueyuan.com/common/images/vip-icon_76ae754.png">VIP会员</span>
+                </a>
+
+                <a href="http://press.jikexueyuan.com/topic/" target="_blank" jktag="&posArea=9004&posOper=900022">
+                    <span><img src="http://s1.jikexueyuan.com/common/images/star-icon_c593bc1.png">求课程</span>
+                </a>
+
+                <a href="http://www.jikexueyuan.com/app/" target="_blank" jktag="&posGP=116001&posArea=9004&posOper=900023"><span><img src="http://s1.jikexueyuan.com/common/images/dl-icon_4bc18a7.png">客户端</span></a>
+
+            </div>
+            <!-- <span class="arrow"></span> -->
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+            <div  id="pager">
+                
+ 
+ 
+<div id="container" class="asideL">
+	<!-- crumbs-->
+	
+	<div class="crumbs">
+
+		<div class="w-1000">
+			<a href="http://www.jikexueyuan.com">首页</a>
+			<em>&gt;</em>
+			<a href="http://www.jikexueyuan.com/course/">职业课程库</a>
+			<em>&gt;</em>Java
+		</div>	
+	</div>
+	<!-- crumbs-->
+	<div class="wrap w-1000">
+	
+		<div id="main">
+			<!-- tagGather -->
+			<div class="tagGather">
+				<div class="bd">
+					<div class="listbox">
+	<!-- sort -->
+	<div class="sort">
+		<div class="wrap">
+			<div class="sortMode">
+				
+					<h1>Java</h1>
+				
+				<dl><dt><span class="type-title-one">最新</span><i class="arrow"></i></dt>
+					<dd>
+						
+						<p class="lesson-new">
+							<a href="http://www.jikexueyuan.com/course/java/1-0-0/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=1.1&aCCate=java&aCSort=1&aCLevel=0&aCKind=0" ref="nofollow">最新</a>
+						</p>
+						
+						<p class="lesson-new">
+							<a href="http://www.jikexueyuan.com/course/java/2-0-0/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=1.1&aCCate=java&aCSort=2&aCLevel=0&aCKind=0" ref="nofollow">最热</a>
+						</p>
+						
+					</dd>
+				</dl>
+				<dl><dt><span class="type-title-tow">课程类型</span><i class="arrow"></i></dt>
+					<dd>
+						
+						<p class="lesson-detailed">
+							<a href="http://www.jikexueyuan.com/course/java/1-0-1/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=2.1aCCate=java&aCSort=1&aCLevel=0&aCKind=0" ref="nofollow">知识精讲</a>
+						</p>
+						
+						<p class="lesson-detailed">
+							<a href="http://www.jikexueyuan.com/course/java/1-0-3/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=2.1aCCate=java&aCSort=3&aCLevel=0&aCKind=0" ref="nofollow">项目实战</a>
+						</p>
+						
+						<p class="lesson-all">
+							<a href="http://www.jikexueyuan.com/course/java/1-0-0/" ref="nofollow">全部</a>
+						</p>
+					</dd>
+				</dl>
+				<dl><dt><span class="type-title-three">难度等级</span><i class="arrow"></i></dt>
+					<dd>
+						
+						<p class="level-one">
+							<a href="http://www.jikexueyuan.com/course/java/1-1-0/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=3.1aCCate=java&aCSort=1&aCLevel=0&aCKind=0" ref="nofollow">初级</a>
+						</p>
+						
+						<p class="level-one">
+							<a href="http://www.jikexueyuan.com/course/java/1-3-0/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=3.1aCCate=java&aCSort=3&aCLevel=0&aCKind=0" ref="nofollow">中级</a>
+						</p>
+						
+						<p class="level-one">
+							<a href="http://www.jikexueyuan.com/course/java/1-5-0/" jktag="&posGP=101001&posArea=0003&posOper=2006&posColumn=3.1aCCate=java&aCSort=5&aCLevel=0&aCKind=0" ref="nofollow">高级</a>
+						</p>
+						
+						<p class="level-all">
+							<a href="http://www.jikexueyuan.com/course/java/1-0-0/" ref="nofollow"> 全部 </a>
+						</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="previewMode">
+				<ul>
+					<li class="kuai-icon curr" jktag="&posArea=0003&posOper=2013&posColumn=4.1"><i class="icon"></i>
+					</li>
+					<li class="list-icon" jktag="&posArea=0003&posOper=2014&posColumn=4.2" ><i class="icon"></i>
+					</li>
+					
+					<li class="tree-icon">
+						<div class="mod-tips tips-min">
+							<div class="wrap">
+								<a href="http://www.jikexueyuan.com/path/java/" target="_blank" jktag="&posGP=101005&posArea=0004&posOper=2008&posColumn=1.1">开发知识体系图</a>
+								<i class="close"></i></div><i class="arrow"></i>
+						    </div>
+						<a href="http://www.jikexueyuan.com/path/java/" target="_blank" class="lesson-map">
+							<i class="icon"></i>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- sort end -->
+	<div class="lesson-list" id="changeid" style="display:none">
+		<ul class="cf" style="display: block;">
+			<!--list-->
+			 
+				 
+					
+<li id="1305" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1305.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1305&posColumn=1305.1">
+			<img src="http://a1.jikexueyuan.com/home/201506/09/d155/55764730354d5.jpg" class="lessonimg" title="Struts2 标签" alt="Struts2 标签">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1305&posColumn=1305.1"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1305.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1305&posColumn=1305.1">Struts2 标签</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲述了 Struts2 OGNL 标签的概念和用法，详细讲解了其区分和使用技巧，并配以示例加以理解。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					62分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon3"></i><em>高级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2090人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1305&posColumn=1305.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1295" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1295.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1295&posColumn=1295.2">
+			<img src="http://a1.jikexueyuan.com/home/201506/08/893b/5574f9ab8c492.jpg" class="lessonimg" title="Java 基础知识面试指导" alt="Java 基础知识面试指导">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1295&posColumn=1295.2"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1295.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1295&posColumn=1295.2">Java 基础知识面试指导</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程全面总结关键字、保留字与基本语法，基本数据类型与变量，操作符，判断与循环的使用等基础知识，并讲解典型面试题案例。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					25分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2199人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1295&posColumn=1295.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1292" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1292.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1292&posColumn=1292.3">
+			<img src="http://a1.jikexueyuan.com/home/201506/08/7403/5574f89f6e4ea.jpg" class="lessonimg" title="Lucene 常用功能介绍" alt="Lucene 常用功能介绍">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1292&posColumn=1292.3"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1292.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1292&posColumn=1292.3">Lucene 常用功能介绍</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要介绍 Lucene 的常用类及方法，如：索引的创建、检索、分词技术、Query 等，通过简单的事例代码介绍如何利用 Lucene 实现索引的创建和检索
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>5课时
+					24分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon3"></i><em>高级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2088人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1292&posColumn=1292.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1291" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1291.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1291&posColumn=1291.4">
+			<img src="http://a1.jikexueyuan.com/home/201506/08/b393/5574f7e07e78c.jpg" class="lessonimg" title="Hadoop 用户行为分析项目之分析与设计" alt="Hadoop 用户行为分析项目之分析与设计">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1291&posColumn=1291.4"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1291.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1291&posColumn=1291.4">Hadoop 用户行为分析项目之分析与设计</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程以用户行为分析案例为基础，带着大家对项目的各个指标做详细的分析，对项目的整体设计做合理的规划，让大家能通过本课程掌握 Hadoop 项目的分析与设计。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					17分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2070人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1291&posColumn=1291.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1276" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1276.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1276&posColumn=1276.5">
+			<img src="http://a1.jikexueyuan.com/home/201506/04/5751/55703f588376d.jpg" class="lessonimg" title="Hadoop 用户行为分析项目之应用概述" alt="Hadoop 用户行为分析项目之应用概述">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1276&posColumn=1276.5"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1276.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1276&posColumn=1276.5">Hadoop 用户行为分析项目之应用概述</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程是基于一个电商网站的用户行为分析来展开的，通过介绍 Hadoop 的业务和应用场景，并带着大家搭建 Hadoop 用户行为分析项目的开发环境。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					26分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2090人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1276&posColumn=1276.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1271" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1271.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1271&posColumn=1271.6">
+			<img src="http://a1.jikexueyuan.com/home/201506/04/d2a1/556fb640211fe.jpg" class="lessonimg" title="证书的概念和使用" alt="证书的概念和使用">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1271&posColumn=1271.6"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1271.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1271&posColumn=1271.6">证书的概念和使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解证书的相关知识，内容包括证书的概念和应用场景、公钥基础设施的概念和作用以及生成证书实战。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					43分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2145人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1271&posColumn=1271.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1241" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1241.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1241&posColumn=1241.7">
+			<img src="http://a1.jikexueyuan.com/home/201506/02/4c71/556d098a02321.jpg" class="lessonimg" title="Struts2 Web 资源获取" alt="Struts2 Web 资源获取">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1241&posColumn=1241.7"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1241.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1241&posColumn=1241.7">Struts2 Web 资源获取</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍了 Struts 2 Web 资源获取的方式，详细讲述了4种获取方式，使你学会如何在 action 中获取 request、response、session、application 对象，以及推荐使用方式的讲解。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					37分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon3"></i><em>高级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2072人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1241&posColumn=1241.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1239" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1239.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1239&posColumn=1239.8">
+			<img src="http://a1.jikexueyuan.com/home/201506/02/c73f/556d088b9c450.jpg" class="lessonimg" title="数字签名的编程使用" alt="数字签名的编程使用">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1239&posColumn=1239.8"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1239.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1239&posColumn=1239.8">数字签名的编程使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解密码学中数字签名的基本概念、应用以及在编程中的使用，内容包括 RSASignature 算法和 DSASignature 算法，实现对消息进行签名的功能。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					53分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2110人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1239&posColumn=1239.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="1229" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/1229.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1229&posColumn=1229.9">
+			<img src="http://a1.jikexueyuan.com/home/201506/01/abe1/556bd0a721a9e.jpg" class="lessonimg" title="Spring Data JPA JPQL 查询语言进阶" alt="Spring Data JPA JPQL 查询语言进阶">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1229&posColumn=1229.9"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/1229.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=1229&posColumn=1229.9">Spring Data JPA JPQL 查询语言进阶</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解了 JPQL 的分组、分页、排序、连接和动态化 JPQL 查询等。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					22分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2117人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=1229&posColumn=1229.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="973" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/973.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=973&posColumn=973.10">
+			<img src="http://a1.jikexueyuan.com/home/201505/27/43f3/55651d74c13bb.jpg" class="lessonimg" title="设计模式之命令模式" alt="设计模式之命令模式">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=973&posColumn=973.10"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/973.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=973&posColumn=973.10">设计模式之命令模式</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程先从设计家电自动化遥控器 API 项目遇到的问题出发，通过分析问题，然后引入命令模式来解决问题，并详细讲解示例项目的实战代码。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					39分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2302人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=973&posColumn=973.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="950" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/950.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=950&posColumn=950.11">
+			<img src="http://a1.jikexueyuan.com/home/201505/25/9c4e/5562826471ecc.jpg" class="lessonimg" title="MyBatis 动态 SQL" alt="MyBatis 动态 SQL">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=950&posColumn=950.11"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/950.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=950&posColumn=950.11">MyBatis 动态 SQL</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解了 MyBatis 动态 SQL，介绍了使用配置文件的标记来动态生成 SQL 语句。其中用到了条件标记、选择标记、循环标记等，并配以示例加以理解。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					30分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2179人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=950&posColumn=950.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="937" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<i class="free-icon"></i> 
+		<a href="http://www.jikexueyuan.com/course/937.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=937&posColumn=937.12">
+			<img src="http://a1.jikexueyuan.com/home/201505/22/dd67/555e8cc2c5888.jpg" class="lessonimg" title="Lucene 概述" alt="Lucene 概述">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=937&posColumn=937.12"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/937.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=937&posColumn=937.12">Lucene 概述</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先对课程规划做整体介绍，其次介绍 Lucene 的基本概念及数学模型，最后讲解如何搭建案例课程开发环境。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>5课时
+					31分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon3"></i><em>高级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2184人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=937&posColumn=937.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="932" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/932.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=932&posColumn=932.13">
+			<img src="http://a1.jikexueyuan.com/home/201505/21/0685/555d3b5cc12d9.jpg" class="lessonimg" title="非对称密码的编程使用" alt="非对称密码的编程使用">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=932&posColumn=932.13"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/932.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=932&posColumn=932.13">非对称密码的编程使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解密码学中非对称密码的基本概念、应用以及在编程中的使用，内容包括公钥密码鼻祖 DH 密钥交换算法以及经典的 RSA 算法。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					58分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2177人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=932&posColumn=932.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="924" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/924.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=924&posColumn=924.14">
+			<img src="http://a1.jikexueyuan.com/home/201505/20/5872/555be820357ee.jpg" class="lessonimg" title="MyBatis 高级查询" alt="MyBatis 高级查询">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=924&posColumn=924.14"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/924.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=924&posColumn=924.14">MyBatis 高级查询</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解 MyBatis 高级查询操作，其中介绍了关联查询、集合查询、鉴别器的使用细节，还介绍了懒加载的配置使用方法，并配以示例加强理解。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					30分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2187人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=924&posColumn=924.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="897" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/897.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=897&posColumn=897.15">
+			<img src="http://a1.jikexueyuan.com/home/201505/14/23d4/5553ffa89db85.jpg" class="lessonimg" title="Spring Data JPA JPQL 查询语言基础" alt="Spring Data JPA JPQL 查询语言基础">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=897&posColumn=897.15"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/897.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=897&posColumn=897.15">Spring Data JPA JPQL 查询语言基础</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解了什么是 JPQL ，JPQL 与 SQL 语言的区别，JPQL 的常用语法，JPQL 的运算符和内置函数。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					27分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2307人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=897&posColumn=897.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="873" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/873.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=873&posColumn=873.16">
+			<img src="http://a1.jikexueyuan.com/home/201505/12/cad4/5551597d14de1.jpg" class="lessonimg" title="设计模式之工厂模式" alt="设计模式之工厂模式">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=873&posColumn=873.16"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/873.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=873&posColumn=873.16">设计模式之工厂模式</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			在具体实现中实例化具体类会导致程序与具体类之间有比较强的耦合关系，而工厂模式就是用来减少这种耦合关系的设计模式。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					36分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2319人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=873&posColumn=873.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="880" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/880.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=880&posColumn=880.17">
+			<img src="http://a1.jikexueyuan.com/home/201505/12/f2a3/555158f970490.jpg" class="lessonimg" title="MyBatis 基础操作" alt="MyBatis 基础操作">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=880&posColumn=880.17"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/880.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=880&posColumn=880.17">MyBatis 基础操作</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程介绍 MyBatis 最基础的增删改查操作，讲解了 insert、update、delete 操作，最简单 select 操作，基本的事务处理过程，并配以示例加以理解。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					40分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">145人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=880&posColumn=880.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="851" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/851.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=851&posColumn=851.18">
+			<img src="http://a1.jikexueyuan.com/home/201505/07/be68/554ac0a1bb9a5.jpg" class="lessonimg" title="第一个 Hibernate 应用 helloapp" alt="第一个 Hibernate 应用 helloapp">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=851&posColumn=851.18"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/851.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=851&posColumn=851.18">第一个 Hibernate 应用 helloapp</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程首先对 Hibernate 基本知识、版本及其优缺点进行了简单介绍，讲解了 Hibernate 开发工具、开发环境的下载和安装，并给出了第一个 Hibernate 的程序示例。
+
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					35分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2639人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=851&posColumn=851.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="827" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<i class="free-icon"></i> 
+		<a href="http://www.jikexueyuan.com/course/827.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=827&posColumn=827.19">
+			<img src="http://a1.jikexueyuan.com/home/201505/05/756e/55482544f3502.jpg" class="lessonimg" title="初识 MyBatis" alt="初识 MyBatis">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=827&posColumn=827.19"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/827.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=827&posColumn=827.19">初识 MyBatis</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程让大家认识 MyBatis，讲解了 MyBatis 的介绍、开发准备，最简单的使用方法。主要包括 MyBatis 历史、特点、环境搭建，基本配置文件，映射配置文件以及一个小小的 hello world 程序。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					29分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2586人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=827&posColumn=827.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="833" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/833.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=833&posColumn=833.20">
+			<img src="http://a1.jikexueyuan.com/home/201505/04/0790/5546e6f8c46d0.jpg" class="lessonimg" title="对称密码的编程使用" alt="对称密码的编程使用">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=833&posColumn=833.20"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/833.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=833&posColumn=833.20">对称密码的编程使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解对称密码在密码学编程中的应用，内容包括最初的 DES，改进后的 3DES，以及为了更高安全标准的 AES，实现对明文的安全加密。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>5课时
+					49分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2175人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=833&posColumn=833.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="807" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/807.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=807&posColumn=807.21">
+			<img src="http://a1.jikexueyuan.com/home/201504/29/8131/55403d9b55dfc.jpg" class="lessonimg" title="Spring Data JPA 实体详解" alt="Spring Data JPA 实体详解">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=807&posColumn=807.21"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/807.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=807&posColumn=807.21">Spring Data JPA 实体详解</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解了Spring Data JPA实体的基本概念、生命周期、实体的继承、实体与数据表之间的映射关系和映射方法以及实体管理器的基本使用方法。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>5课时
+					38分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon2"></i><em>中级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2293人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=807&posColumn=807.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="804" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/804.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=804&posColumn=804.22">
+			<img src="http://a1.jikexueyuan.com/home/201504/28/9d22/553eec3a46e2d.jpg" class="lessonimg" title="消息摘要的编程使用" alt="消息摘要的编程使用">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=804&posColumn=804.22"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/804.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=804&posColumn=804.22">消息摘要的编程使用</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解消息摘要的编程使用，涵盖 MD 类、SHA 类、HMAC 类消息摘要的使用，通过实例验证文件摘要。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>5课时
+					54分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2205人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=804&posColumn=804.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="787" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/787.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=787&posColumn=787.23">
+			<img src="http://a1.jikexueyuan.com/home/201504/24/1e7d/5539a88e3d60c.jpg" class="lessonimg" title="SSO 实战篇：跨域 SSO 原理与技术" alt="SSO 实战篇：跨域 SSO 原理与技术">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=787&posColumn=787.23"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/787.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=787&posColumn=787.23">SSO 实战篇：跨域 SSO 原理与技术</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程主要讲解跨域单点登录（SSO）的原理与技术，内容包括：SSO（单点登录）的实现原理和各种跨域技术。该课程基本涵盖所有跨域编程所涉及的主流技术方案。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>4课时
+					137分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+					<i class="xinhao-icon3"></i><em>高级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2363人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=787&posColumn=787.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+					
+<li id="784" test="0" deg="0" >
+	<div class="lessonimg-box">
+			
+		
+		<a href="http://www.jikexueyuan.com/course/784.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=784&posColumn=784.24">
+			<img src="http://a1.jikexueyuan.com/home/201505/11/bfe8/555059990d043.jpg" class="lessonimg" title="设计模式之单例模式" alt="设计模式之单例模式">
+			
+			<div class="lessonplay" style="opacity: 0;">
+				<i class="playericon" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=784&posColumn=784.24"></i>
+			</div>
+			
+
+		</a>
+		
+	</div>
+
+	<div class="lesson-infor" style="height: 88px;">
+		<h2 class="lesson-info-h2"><a href="http://www.jikexueyuan.com/course/784.html" target="_blank" jktag="&posGP=103001&posArea=0002&posOper=2004&aCId=784&posColumn=784.24">设计模式之单例模式</a></h2>
+		<p style="height: 0px; opacity: 0; display: none;">
+			本课程讲解单例模式的原理和意义，讲解经典单例模式的代码实现方式和存在的问题，并给出3种优化方式。
+		</p>
+		<div class="timeandicon">
+			<div class="cf">
+				<dl>
+					<dd class="mar-b8"><i class="time-icon"></i><em>3课时
+					29分钟</em>
+					</dd>
+					<dd class="zhongji">
+						
+						<i class="xinhao-icon"></i><em>初级</em>
+					</dd>
+					
+				</dl>
+				<em class="learn-number">2266人学习</em>
+			</div>
+			<div class="cf">
+				<div class="lessonicon-box">
+					
+					<a href="http://www.jikexueyuan.com/course/java/">
+						<img width="16" src="http://a1.jikexueyuan.com/home/201411/03/7630/54578dd427722.png" alt="java" title="Java" jktag="&posGP=101001&posArea=0002&posOper=2005&aCId=784&posColumn=784.1&aCCate=java" >
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+
+ 
+				 
+			
+
+			<!--list end-->
+		</ul>
+	</div>
+	<div id="page-nav"></div>
+	
+	
+	
+</div>
+<!--listbox end -->
+
+				</div>
+			</div>
+			<!-- tagGather end -->
+		</div>
+		<!-- left 分类 -->
+		<div id="aside">
+			<div class="aside-allCategory">
+				<div class="hd"><a href="http://www.jikexueyuan.com/course/" jktag="posGP=101001&posArea=0002&posOper=2006&aCCate=all&posColumn=1.0"><h2>全部分类</h2></a>
+				</div>
+				<div class="bd">
+					<ul class="aside-cList">
+	
+	<li>
+		<dl><dt>移动应用开发</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/cocos2d-x/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=cocos2d-x&posColumn=10.1">Cocos2d-x</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/html5/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=html5&posColumn=10.2">HTML5</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/unity3d/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=unity3d&posColumn=10.3">Unity3D</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/swift/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=swift&posColumn=10.4">Swift</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/ios/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=ios&posColumn=10.5">iOS</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/android/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=android&posColumn=10.6">Android</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/egret/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=egret&posColumn=10.7">Egret</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/createjs/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=createjs&posColumn=10.8">CreateJS</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/unreal/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=unreal&posColumn=10.9">Unreal4</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>后端开发</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/php/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=php&posColumn=11.1">PHP</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/aspdotnet/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=aspdotnet&posColumn=11.2">ASP.NET</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/j2ee/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=j2ee&posColumn=11.3">J2EE</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/python/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=python&posColumn=11.4">Python</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/go/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=go&posColumn=11.5">Go</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/django/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=django&posColumn=11.6">Django</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>Web前端开发</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/html5/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=html5&posColumn=12.1">HTML5</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/typescript/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=typescript&posColumn=12.2">TypeScript</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/bootstrap/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=bootstrap&posColumn=12.3">Bootstrap</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/css/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=css&posColumn=12.4">CSS</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/javascript/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=javascript&posColumn=12.5">JavaScript</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/jquery/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=jquery&posColumn=12.6">jQuery</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/jqueryui/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=jqueryui&posColumn=12.7">jQuery UI</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/jquerymobile/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=jquerymobile&posColumn=12.8">jQuery Mobile</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/flash/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=flash&posColumn=12.9">Flash</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>智能硬件&amp;物联网</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/cool/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=cool&posColumn=13.1">新酷技术</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/iot/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=iot&posColumn=13.2">物联网操作系统</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/hcit/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=hcit&posColumn=13.3">人机交互技术</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/osh/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=osh&posColumn=13.4">开源硬件</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>操作系统&amp;数据库</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/linux/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=linux&posColumn=15.1">Linux</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/mongodb/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=mongodb&posColumn=15.2">MongoDB</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/mysql/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=mysql&posColumn=15.3">MySQL</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>基础技术</dt>
+			<dd>
+			
+			
+				<span><a class="curr" href="http://www.jikexueyuan.com/course/java/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=java&posColumn=14.1">Java</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/c/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=c&posColumn=14.2">C</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/swift/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=swift&posColumn=14.3">Swift</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/git/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=git&posColumn=14.4">Git</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/objectivec/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=objectivec&posColumn=14.5">Objective-C</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/csharp/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=csharp&posColumn=14.6">C#</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/cplus/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=cplus&posColumn=14.7">C++</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>图形图像设计</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/design/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=design&posColumn=16.1">设计理论基础</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/photoshop/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=photoshop&posColumn=16.2">Photoshop</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/sketch/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=sketch&posColumn=16.3">Sketch</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+	<li>
+		<dl><dt>认证考试</dt>
+			<dd>
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/ncrec/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=ncrec&posColumn=17.1">计算机二级</a></span>
+			
+			
+			
+				<span><a href="http://www.jikexueyuan.com/course/msoffice/" jktag="&posGP=101001&posArea=0002&posOper=2007&aCCate=msoffice&posColumn=17.2">计算机一级</a></span>
+			
+			
+			</dd>
+		</dl>
+	</li>
+	
+</ul>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+            </div>
+            <div id="footer" class="mar-t50">
+    <div class=" jkinfor-block">
+        <div class="jkinfor cf">
+            <dl>
+                <dt><a target="_blank" href="http://www.jikexueyuan.com/course/" jktag="&posGP=101001&posArea=9005&posOper=900027">极客学院</a></dt>
+                <dd>·<a target="_blank" href="http://www.jikexueyuan.com/course/" jktag="&posGP=101001&posArea=9005&posOper=900027">职业课程库</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/path/" jktag="&posGP=101003&posArea=9005&posOper=900027">知识体系图</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/practice/" jktag="&posGP=101004&posArea=9005&posOper=900027">实战路径图</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/partner/" jktag="107001&posGP=&posArea=9005&posOper=900027">企业课程</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/resources/" jktag="&posGP=108001&posArea=9005&posOper=900027">资源下载</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/tag/" jktag="&posGP=105002&posArea=9005&posOper=900027">课程标签</a></dd>
+            </dl>
+            <dl>
+                <dt><a target="_blank" href=" http://www.jikexueyuan.com/member/freevip.html" jktag="&posGP=115002&posArea=9005&posOper=900027">网站服务</a></dt>
+                <dd>·<a target="_blank" href=" http://press.jikexueyuan.com/topic/" jktag="&posArea=9005&posOper=900027">课程需求</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/member/freevip.html" jktag="&posGP=115002&posArea=9005&posOper=900027">免费体验VIP</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/blog/" jktag="&posGP=109001&posArea=9005&posOper=900027">黑板报</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/sitemap.html" jktag="&posGP=116001&posArea=9005&posOper=900027">网站地图</a></dd>
+            </dl>
+            <dl>
+                <dt><a target="_blank" href=" http://www.jikexueyuan.com/question/" jktag="&posGP=104002&posArea=9005&posOper=900027">帮助中心</a></dt>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/question/" jktag="&posGP=104002&posArea=9005&posOper=900027">技术问答</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/vip/" jktag="&posGP=114001&posArea=9005&posOper=900027">VIP权益</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/faq.html" jktag="&posGP=110001&posArea=9005&posOper=900027">常见问题</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/service.html" jktag="&posGP=110001&posArea=9005&posOper=900027">服务条款</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/copyright.html" jktag="&posGP=110001&posArea=9005&posOper=900027">版权声明</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/disclaimer.html" jktag="&posGP=110001&posArea=9005&posOper=900027">免责声明</a></dd>
+            </dl>
+            <dl>
+                <dt><a target="_blank" href=" http://www.jikexueyuan.com/help/about.html" jktag="&posGP=110001&posArea=9005&posOper=900027">交流合作</a></dt>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/about.html" jktag="&posGP=110001&posArea=9005&posOper=900027">关于我们</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/contact.html" jktag="&posGP=110001&posArea=9005&posOper=900027">联系我们</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/help/join.html" jktag="&posGP=110001&posArea=9005&posOper=900027">社会招聘</a></dd>
+                <dd>·<a target="_blank" href=" http://press.jikexueyuan.com/evangelist/apply.html" jktag="&posArea=9005&posOper=900027">布道师招募</a></dd>
+                <dd>·<a target="_blank" href="mailto:hey@jikexueyuan.com?subject=业务咨询合作" rel="nofollow" jktag="&posArea=9005&posOper=900027">合作咨询</a></dd>
+                <dd>·<a target="_blank" href=" http://www.jikexueyuan.com/friendlink.html" jktag="&posGP=113003&posArea=9005&posOper=900027">友情链接</a></dd>
+            </dl>
+            <div class="search-share">
+                <div class="app-download">
+                    <a target="_blank" href=" http://www.jikexueyuan.com/app/" jktag="&posGP=116001&posArea=9005&posOper=900024">
+                        <img src="http://s1.jikexueyuan.com/common/images/iphone_ecb3977.png" width="21">
+                        <div>
+                            <strong>手机客户端</strong>
+                            <p>离线缓存  随时学习</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="share">
+                    <a href="http://weibo.com/jikexueyuan" class="sina-icon" rel="nofollow" target="_blank" jktag="&posArea=9005&posOper=900025"></a>
+                    <a href="http://tieba.baidu.com/f?kw=%BC%AB%BF%CD%D1%A7%D4%BA&amp;fr=index" title="极客学院官方百度贴吧" class="tieba-icon" rel="nofollow" target="_blank"  jktag="&posArea=9005&posOper=900026"></a>
+                    <a href="javascript:void(0);" class="qq-icon" rel="nofollow" jktag="&posArea=9005&posOper=900030">
+                        <img src="http://s1.jikexueyuan.com/common/images/weixin-pop_7fe7a08.png" class="weinxinpop">
+                    </a>
+                </div>
+                 <div class="kefu-online">
+                   <a href="http://meiqia.com/chat/7594" target="_blank" jktag="&posArea=9005&posOper=900031" rel="nofollow">
+                    <div class="kefu-icon online"></div><h5>联系我们</h5><p>工作日9:00-21:00在线</p></a>
+                  </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="w-1000 copyright">
+        Copyright © 2013-2015 <strong><a href="http://www.jikexueyuan.com/" target="_blank">极客学院</a></strong>&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reversed. 京ICP备11018032号-8 京公网安备11010802013056
+    </div>
+</div>
+<script src="//meiqia.com/js/mechat.js?unitid=7594&btn=hide" charset="UTF-8" async="async"></script>
+<script type="text/javascript">
+    var inter = setInterval(function(){
+        if(window.mechatMetadata){
+            clearInterval(inter);
+            window.mechatMetadata({
+            appUserName: '',
+            extraParams:{
+                '用户名':'',
+                'UID'   : '',
+                '开始时间' : '',
+                '结束时间' : '',
+                '会员类型':'',
+            }
+        });
+    }
+},500);
+</script>
+<script src="http://log.jikexueyuan.com/JKanalysis.js"></script>
+<script type="text/javascript">
+    var _Sjkxy    = [];
+        _Sjkxy['jPro']    = 'www';
+</script>
+
+
+        </div>
+        <script type="text/javascript">LazyLoad=function(e){function t(t,n){var s,r=e.createElement(t);for(s in n)n.hasOwnProperty(s)&&r.setAttribute(s,n[s]);return r}function n(e){var t,n,s=i[e];s&&(t=s.callback,n=s.urls,n.shift(),u=0,n.length||(t&&t.call(s.context,s.obj),i[e]=null,f[e].length&&r(e)))}function s(){var t=navigator.userAgent;o={async:e.createElement("script").async===!0},(o.webkit=/AppleWebKit\//.test(t))||(o.ie=/MSIE|Trident/.test(t))||(o.opera=/Opera/.test(t))||(o.gecko=/Gecko\//.test(t))||(o.unknown=!0)}function r(r,u,h,g,d){var p,y,m,b,k,v,j=function(){n(r)},w="css"===r,E=[];if(o||s(),u)if(u="string"==typeof u?[u]:u.concat(),w||o.async||o.gecko||o.opera)f[r].push({urls:u,callback:h,obj:g,context:d});else for(p=0,y=u.length;y>p;++p)f[r].push({urls:[u[p]],callback:p===y-1?h:null,obj:g,context:d});if(!i[r]&&(b=i[r]=f[r].shift())){for(l||(l=e.head||e.getElementsByTagName("head")[0]),k=b.urls,p=0,y=k.length;y>p;++p){if(v=k[p],w?m=o.gecko?t("style"):t("link",{href:v,rel:"stylesheet"}):(m=t("script",{src:v}),m.async=!1),m.className="lazyload",m.setAttribute("charset","utf-8"),o.ie&&!w&&"onreadystatechange"in m&&!("draggable"in m))m.onreadystatechange=function(){/loaded|complete/.test(m.readyState)&&(m.onreadystatechange=null,j())};else if(w&&(o.gecko||o.webkit))if(o.webkit){var T;if(b.urls[p]=m.href,T=c()){p--,y=k.length;continue}}else m.innerHTML='@import "'+v+'";',a(m);else m.onload=m.onerror=j;E.push(m)}var A=document.createDocumentFragment();for(p=0,y=E.length;y>p;++p)A.appendChild(E[p]);var x;return"css"===r?x=l:"js"===r&&(x=document.getElementById("pages-container")||l),x.appendChild(A),E}}function a(e){var t;try{t=!!e.sheet.cssRules}catch(s){return u+=1,void(200>u?setTimeout(function(){a(e)},50):t&&n("css"))}n("css")}function c(){var e,t=i.css,s=!1;if(t){for(e=h.length;--e>=0;)if(h[e].href===t.urls[0]){s=!0,n("css");break}u+=1,t&&(200>u?setTimeout(c,50):n("css"))}return s}var o,l,i={},u=0,f={css:[],js:[]},h=e.styleSheets;return{css:function(e,t,n,s){r("css",e,t,n,s)},js:function(e,t,n,s){r("js",e,t,n,s)}}}(this.document);</script>
+     <script type="text/javascript">var _ready = false;_list = [];_when = function(cb) {_ready?cb():_list.push(cb);};LazyLoad.js(['http://s1.jikexueyuan.com/common/js/jquery.min_20d0a99.js', 'http://s1.jikexueyuan.com/common/js/TweenMax.min_8b3f560.js', 'http://s1.jikexueyuan.com/common/pkg/common_sync0_libs_f2571a4.js', 'http://s1.jikexueyuan.com/common/js/setcookie_3745534.js', 'http://s1.jikexueyuan.com/common/pkg/common_sync1_libs_8b23cee.js', 'http://s1.jikexueyuan.com/common/widget/pager/jquery.pager_5df04e5.js', 'http://s1.jikexueyuan.com/course/js/lessonlist_79f0aca.js', 'http://s1.jikexueyuan.com/common/widget/pager/PagerDemo_e88048d.js'], function () {!function() { 
+	require("common:widget/header/pageloading.js").init("http://www.jikexueyuan.com");
+	require('common:widget/header/header.js').init();
+ }();
+!function() {
+        require("common:widget/pager/PagerDemo.js").init(1,4,24);
+	}();;_ready=true;var _item; while((_item=_list.shift())){_item();}});</script></body>
+</html>
+
