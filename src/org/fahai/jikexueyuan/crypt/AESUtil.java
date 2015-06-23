@@ -15,7 +15,7 @@ public class AESUtil {
 	 */
 	public static byte[] initKey() throws NoSuchAlgorithmException{
 		KeyGenerator keyGen = KeyGenerator.getInstance("AES");
-		keyGen.init(256);  //192 256
+		keyGen.init(128);  //192 256
 		SecretKey secretKey = keyGen.generateKey();
 		return secretKey.getEncoded();
 	}

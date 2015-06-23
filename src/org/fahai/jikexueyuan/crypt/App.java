@@ -34,6 +34,7 @@ public class App {
 		// HMAC
 		byte[] hmacKey = MessageDigestUtil.initHmacKey();
 		System.out.println("hmacKey: " + BytesToHex.fromBytesToHex(hmacKey));
+		System.out.println("hmacKey new: " + BytesToHex.parseByte2HexStr(hmacKey));
 		String hmacResult = MessageDigestUtil.encryptHmac(plainBytes, hmacKey);
 		System.out.println(text + " >>> HMAC >>> " + hmacResult);
 		
